@@ -1,0 +1,14 @@
+.offer {
+  @apply relative text-gray-400 inline-block;
+}
+
+.offer:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: -2px;
+  margin: auto;
+  background-color: #ef4444;
+  height: 1px;
+  width: 100%;
+}

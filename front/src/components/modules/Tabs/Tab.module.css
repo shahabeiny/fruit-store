@@ -1,0 +1,19 @@
+.tab {
+  @apply relative  cursor-pointer transition-all text-center;
+}
+
+.tab__active.tab::after {
+  @apply absolute content-[''] h-2 w-full top-10 right-0 left-0 mx-auto bg-orange-300 rounded-xl;
+}
+
+
+
+.tabs__mobile.tabs__mobile--active {
+  bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .tab__active.tab::after {
+    content: none;
+  }
+}

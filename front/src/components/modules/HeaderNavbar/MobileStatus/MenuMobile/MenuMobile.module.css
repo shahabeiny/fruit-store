@@ -1,0 +1,7 @@
+.menu{
+  @apply flex items-center gap-x-2 pr-2.5 
+}
+
+.menu--select{
+  @apply bg-orange-300/20  h-10 rounded-md
+}

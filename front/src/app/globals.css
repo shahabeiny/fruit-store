@@ -1,0 +1,110 @@
+/* src/main.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    --primary: #52525b;
+    --secondary: #27272a;
+  }
+
+  body {
+    /* font-family: Dana; */
+    @apply font-Dana;
+    direction: rtl;
+
+    @apply bg-gray-100 dark:bg-zinc-800;
+  }
+
+  input,
+  button,
+  textarea {
+    @apply border-none outline-none;
+  }
+
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    --sb-track-color: #f1f1f1;
+    --sb-thumb-color: #888888;
+    --sb-size: 10px;
+    ::-webkit-scrollbar {
+      width: var(--sb-size);
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--sb-track-color);
+      border-radius: 16px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--sb-thumb-color);
+      border-radius: 16px;
+    }
+  }
+
+  ::selection {
+    @apply text-white bg-orange-300;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-x-center {
+    @apply flex items-center;
+  }
+
+  .text-ltr {
+    direction: ltr;
+    text-align: left;
+  }
+
+  .menu {
+    @apply flex items-center gap-x-2 pr-2.5;
+  }
+
+  .menu--select {
+    @apply bg-orange-300/20  h-10 rounded-md;
+  }
+}
+
+.swal2-show {
+  @apply bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white;
+}
+
+.Toastify__toast-body {
+  font-weight: 600;
+}
+
+.Toastify__close-button {
+  @apply text-zinc-700 dark:text-white;
+}
+.Toastify__toast {
+  @apply bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white;
+}
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
